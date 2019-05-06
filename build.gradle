@@ -1,0 +1,49 @@
+group 'ExSoft'
+version '1.0_dev'
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.3'
+    }
+}
+
+//apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'application'
+apply plugin: 'java'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    // telegram bot
+    compile group: 'org.telegram', name: 'telegrambots-abilities', version: '4.2'
+
+    // json parser
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.8'
+    
+    // opencv
+    compile name: 'opencv-400'
+}
+
+application {
+    mainClassName = 'ru.exsoft.Main'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ru.exsoft.Main'
+    }
+}
