@@ -13,20 +13,21 @@ public class HomeWatcher {
 
     private static HomeWatcher instance;
 
-    private HomeWatcher() {
+    private HomeWatcher(boolean isGui) {
         try {
             configManager.load(CONFIG_FILE);
             Config config = configManager.getConfig();
-            Telegram.start(config.proxyHost, config.proxyPort, config.proxyUser, config.proxyPassword);
-            OpenCV.init(config.width, config.height, config.sensitivity, config.maxarea);
+            Telegram.start(config);
+            NetworkChecker  networkChecker = NetworkChecker.getInstance(config);
+            OpenCV.init(config, isGui);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static HomeWatcher getInstance() {
+    public static HomeWatcher getInstance(boolean isGui) {
         if (instance == null) {
-            instance = new HomeWatcher();
+            instance = new HomeWatcher(isGui);
         }
         return instance;
     }

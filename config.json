@@ -1,1 +1,33 @@
-{"width":800,"height":600,"sensitivity":15,"maxarea":10.0,"proxyHost":"phobos.public.opennetwork.cc","proxyPort":1090,"proxyUser":"324765066","proxyPassword":"C6oczuhe"}
+{
+  "width": 640,
+  "height": 480,
+  "sensitivity": 12,
+  "minArea": 10.0,
+  "framesTrigger": 5,
+  "endRecordSec": 5,
+  "tempVideoPatch": "/mnt/tmpfs/video_%s.mp4",
+  "tempImagePatch": "/mnt/tmpfs/img.jpg",
+  "rotate": true,
+  "angle": 180.0,
+  "waitSeconds": 5,
+  "filterPeriod": 30,
+  "knownHosts": {
+    "78:02:F8:62:26:C0": "Отец",
+    "38:A4:ED:1F:76:BC": "Брат",
+    "30:9C:23:1E:4D:0B": "Компьютер",
+    "62:9B:B3:48:A6:B5": "Банана",
+    "00:27:15:09:95:4E": "Сосед Александр планшет",
+    "04:F7:E4:24:BB:A8": "ICaxapI",
+    "D8:CE:3A:88:DE:18": "Отец",
+    "CC:73:14:1C:8B:4B": "Сосед Александр",
+    "20:EE:28:CD:12:5F": "Каролина",
+    "F4:F5:DB:0C:B0:69": "Хозяйка квартиры",
+    "70:62:B8:89:E3:FC": "D-link"
+  },
+  "greenHosts": [
+    "04:F7:E4:24:BB:A8",
+    "38:A4:ED:1F:76:BC",
+    "78:02:F8:62:26:C0",
+    "D8:CE:3A:88:DE:18"
+  ]
+}

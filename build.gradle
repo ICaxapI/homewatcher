@@ -34,8 +34,16 @@ dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.8'
     
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+    
+    //javacv
+    compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.5'
+
     // opencv
-    compile name: 'opencv-400'
+    //compile name: 'opencv-400'
+
+    //ffmpeg
+    //compile 'net.bramp.ffmpeg:ffmpeg:0.6.2'
 }
 
 application {
